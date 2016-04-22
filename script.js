@@ -10,10 +10,9 @@ module.exports = new Script({
         //prompt: (bot) => bot.say('Beep boop...'),
         receive: () => 'processing'
     },
-    
     start: {
         receive: (bot) => {
-            return bot.say('Salut! On se présente:')
+            return bot.say('On se présente:')
                 .then(() => 'askName');
         }
     },
