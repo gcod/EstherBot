@@ -31,7 +31,7 @@ module.exports = new Script({
             const city = message.text;
             return bot.setProp('city', city)
                 .then(() => bot.say(`${city}, quelle belle ville!`))
-                .then(() => bot.say(`Quel type d\'entreprise cherches-tu ${name}? (Ex: AUTOMOBILE, MAISON, RESTAURANT, SANTÉ, HOTEL)`))
+                .then(() => bot.say(`Quel type d\'entreprise cherches-tu? (Ex: AUTOMOBILE, MAISON, RESTAURANT, SANTÉ, HOTEL)`))
                 .then(() => 'speak');
         }
     },
