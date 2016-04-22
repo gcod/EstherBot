@@ -26,7 +26,7 @@ module.exports = new Script({
         }
     },
     askCity: {
-        prompt: (bot) => bot.say('Où es-tu?'),
+        prompt: (bot) => bot.say('Dans quelle ville es-tu?'),
         receive: (bot, message) => {
             const city = message.text;
             return bot.setProp('city', city)
