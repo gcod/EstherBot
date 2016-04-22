@@ -11,24 +11,29 @@ module.exports = new Script({
         receive: () => 'processing'
     },
     
+    start: {
+        receive: (bot) => {
+            return bot.say('Salut! On se présente:')
+                .then(() => 'askName');
+        }
+    },
     askName: {
-        prompt: (bot) => bot.say('C\'est quoi ton ptit nom?'),
+        prompt: (bot) => bot.say('Je suis YPGab. Et toi, c\'est quoi ton ptit nom?'),
         receive: (bot, message) => {
             const name = message.text;
             return bot.setProp('name', name)
                 .then(() => bot.say(`Super! Je vais t'appeler ${name}`))
-                .then(() => 'finish');
+                .then(() => 'question');
         }
-    },
-
-    start: {
+    question: {
         receive: (bot) => {
             return bot.say('Quel type d\'entreprise cherches-tu? (Ex: AUTOMOBILE, MAISON, RESTAURANT, SANTÉ, HOTEL) ')
                 .then(() => 'speak');
         }
     },
     
-
+    
+    },
     speak: {
         receive: (bot, message) => {
 
