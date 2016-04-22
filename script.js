@@ -13,7 +13,7 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('Dans quelle industrie se trouve le marchand que tu cherches? (Ex: AUTOMOBILE, MAISON ET JARDINAGE, RESTAURANT, SANTÉ, HOTEL) ')
+            return bot.say('Quel type d'entreprise cherches tu? (Ex: AUTOMOBILE, MAISON, RESTAURANT, SANTÉ, HOTEL) ')
                 .then(() => 'speak');
         }
     },
