@@ -1,5 +1,5 @@
 {
-    		"HELLO": "Quel type d'entreprise cherches-tu ${name}? (Ex: AUTOMOBILE, MAISON, RESTAURANT, SANTÉ, HOTEL)",
+    		"HELLO": "Quel type d'entreprise cherches-tu? (Ex: AUTOMOBILE, MAISON, RESTAURANT, SANTÉ, HOTEL)",
     		"AUTOMOBILE": "Problème avec ton CHAR?  Tu checherche une PIECE en particulier? Tu veux changer de VOITURE?",
 			"MAISON": "Ah, problème de PLOMBERIE? La PEINTURE peut être? Ou l'ÉLÉCTRICITÉ?",
 			"PLOMBERIE": "Aie, ok! Voilà la listes de tous les plombiers de ${city}: http://www.pagesjaunes.ca/search/si/1/Plombiers+%26+entrepreneurs+en+plomberie/${city}",
