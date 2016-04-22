@@ -12,7 +12,7 @@ module.exports = new Script({
     },
     
     askName: {
-        prompt: (bot) => bot.say('C'est quoi ton ptit nom?'),
+        prompt: (bot) => bot.say('C\'est quoi ton ptit nom?'),
         receive: (bot, message) => {
             const name = message.text;
             return bot.setProp('name', name)
