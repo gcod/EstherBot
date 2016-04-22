@@ -23,6 +23,15 @@ module.exports = new Script({
             return bot.setProp('name', name)
                 .then(() => bot.say(`Super! Je vais t\'appeler ${name}`))
                 .then(() => bot.say(`Quel type d\'entreprise cherches-tu ${name}? (Ex: AUTOMOBILE, MAISON, RESTAURANT, SANTÉ, HOTEL)`))
+                .then(() => 'askCity');
+        }
+    },
+    askCity: {
+        prompt: (bot) => bot.say('Où es-tu?'),
+        receive: (bot, message) => {
+            const city = message.text;
+            return bot.setProp('city', city)
+                .then(() => bot.say(`${city}, quelle belle ville!`))
                 .then(() => 'speak');
         }
     },
