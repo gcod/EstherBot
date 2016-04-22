@@ -17,7 +17,7 @@ module.exports = new Script({
         }
     },
     askName: {
-        prompt: (bot) => bot.say('Je suis YPGab. Et toi, c\'est quoi ton ptit nom?'),
+        prompt: (bot) => bot.say('Je suis YPGab. Et toi, quel est ton nom?'),
         receive: (bot, message) => {
             const name = message.text;
             return bot.setProp('name', name)
