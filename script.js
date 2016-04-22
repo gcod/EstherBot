@@ -10,6 +10,16 @@ module.exports = new Script({
         //prompt: (bot) => bot.say('Beep boop...'),
         receive: () => 'processing'
     },
+    
+    askName: {
+        prompt: (bot) => bot.say('C'est quoi ton ptit nom?'),
+        receive: (bot, message) => {
+            const name = message.text;
+            return bot.setProp('name', name)
+                .then(() => bot.say(`Super! Je vais t'appeler ${name}`))
+                .then(() => 'finish');
+        }
+    },
 
     start: {
         receive: (bot) => {
@@ -17,6 +27,7 @@ module.exports = new Script({
                 .then(() => 'speak');
         }
     },
+    
 
     speak: {
         receive: (bot, message) => {
