@@ -31,9 +31,6 @@ module.exports = new Script({
                 .then(() => 'speak');
         }
     },
-    
-    
-    },
     speak: {
         receive: (bot, message) => {
 
