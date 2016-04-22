@@ -22,7 +22,6 @@ module.exports = new Script({
             const name = message.text;
             return bot.setProp('name', name)
                 .then(() => bot.say(`Super! Je vais t\'appeler ${name}`))
-                .then(() => bot.say(`Quel type d\'entreprise cherches-tu ${name}? (Ex: AUTOMOBILE, MAISON, RESTAURANT, SANTÉ, HOTEL)`))
                 .then(() => 'askCity');
         }
     },
@@ -32,6 +31,7 @@ module.exports = new Script({
             const city = message.text;
             return bot.setProp('city', city)
                 .then(() => bot.say(`${city}, quelle belle ville!`))
+                .then(() => bot.say(`Quel type d\'entreprise cherches-tu ${name}? (Ex: AUTOMOBILE, MAISON, RESTAURANT, SANTÉ, HOTEL)`))
                 .then(() => 'speak');
         }
     },
