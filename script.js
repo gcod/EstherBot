@@ -24,7 +24,7 @@ module.exports = new Script({
             return bot.setProp('name', name)
                 .then(() => bot.say(`Super! Je vais t'appeler ${name}`))
                 .then(() => 'question');
-        }
+        },
     question: {
         receive: (bot) => {
             return bot.say('Quel type d\'entreprise cherches-tu? (Ex: AUTOMOBILE, MAISON, RESTAURANT, SANTÉ, HOTEL) ')
